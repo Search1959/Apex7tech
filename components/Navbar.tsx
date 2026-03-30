@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion, AnimatePresence } from 'motion/react';
 import { Menu, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -37,10 +38,15 @@ export default function Navbar() {
       )}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-1 group">
-          <span className="font-display text-2xl md:text-3xl tracking-wider text-text-light">
-            APEX<span className="text-primary orange-glow group-hover:animate-pulse">7</span>TECH
-          </span>
+        <Link href="/" className="flex items-center group">
+          <Image
+            src="/logo-apex7tech.png"
+            alt="Apex7Tech Logo"
+            width={160}
+            height={48}
+            className="h-10 md:h-12 w-auto object-contain"
+            priority
+          />
         </Link>
 
         {/* Desktop Nav */}
