@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Instagram, Linkedin, Facebook, Twitter, Mail, Phone, MapPin, Send } from 'lucide-react';
 
 const quickLinks = [
@@ -20,8 +21,14 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
         {/* Left: Brand */}
         <div className="space-y-6">
-          <Link href="/" className="font-display text-3xl tracking-wider text-text-light">
-            APEX<span className="text-primary orange-glow">7</span>TECH
+          <Link href="/">
+            <Image
+              src="/logo-apex7tech.png"
+              alt="Apex7Tech Logo"
+              width={140}
+              height={42}
+              className="h-10 w-auto object-contain"
+            />
           </Link>
           <p className="text-text-muted italic">
             Accelerate. Amplify. Achieve.
